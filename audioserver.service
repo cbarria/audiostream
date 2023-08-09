@@ -1,0 +1,11 @@
+[Unit]
+Description=Audio Stream Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/streamserver.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=default.target
